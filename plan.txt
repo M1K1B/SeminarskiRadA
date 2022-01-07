@@ -1,0 +1,27 @@
+Korisnici:
+    Vozac
+    Menadzer
+
+Baze:
+    Rute (Pocetna Destinacija-Krajnja Destinacija|Tovar|ID vozaca|Kilometraza(km)|PutniTroskovi(rsd)) (Primer: Beograd-Nis|Pesak|3|250|13000)
+    Korisnici (ID|Rank|Ime i Prezime|JMBG|Broj telefona|Korsnicko ime|Lozinka) (Primer: 3|1|Mirko Mirkovic|0312993723153|0631526724|mmirkovic|sifra123)
+    Aktivne rute (Isto kao i rute samo sto ima prazna polja za vozaca da upise) (Primer: Beograd-Nis|Pesak|3|_|_)
+
+Funkcije vozaca:
+    Pregled svojih aktivnih ruta
+    Pregled svih svojih ruta (uz graf)
+    Zatvaranje svojih aktivnih ruta (dopuna podataka i zatvaranje rute)
+    
+Funkcije menadzera:
+    Pregled svih i aktivnih ruta svih vozaca (uz grafove)
+    Kreiranje novih ruta za vozace
+    Pregled vozaca
+    Zaposljavanje i otpustanje vozaca
+
+Fajlovi ce biti:
+    Rute (txt)
+    Zaposljeni (txt)
+    AktivneRute (txt)
+    Main (py)
+    Vozac (py)
+    Menadzer (py)
