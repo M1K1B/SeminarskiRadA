@@ -1,6 +1,6 @@
 Korisnici:
-    Vozac
-    Menadzer
+    Vozac       rank: 0
+    Menadzer    rank: 1
 
 Baze:
     Rute (Pocetna Destinacija-Krajnja Destinacija|Tovar|ID vozaca|Kilometraza(km)|PutniTroskovi(rsd)) (Primer: Beograd-Nis|Pesak|3|250|13000)

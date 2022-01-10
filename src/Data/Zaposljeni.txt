@@ -1,3 +1,3 @@
-3|1|Mirko Mirkovic|0312993723153|0631526724|mmirkovic1|sifra123
+3|0|Mirko Mirkovic|0312993723153|0631526724|mmirkovic1|sifra123
 3|1|Mirko Mirkovic|0312993723153|0631526724|mmirkovic2|sifra12
 3|1|Mirko Mirkovic|0312993723153|0631526724|mmirkovic3|sifra1

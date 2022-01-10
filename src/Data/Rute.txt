@@ -1,0 +1,6 @@
+Beograd-Nis|Pesak|3|250|13000
+Skoplje-Jagodina|Sljunak|2|250|13000
+Zagreb-Beograd|Pesak|1|250|13000
+Beograd-Atina|Paracetamol|3|250|13000
+Beograd-Nis|Pesak|4|250|13000
+Novi Sad-Zajecar|Jecam|3|250|13000
