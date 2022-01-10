@@ -4,3 +4,5 @@ Zagreb-Beograd|Pesak|1|250|13000
 Beograd-Atina|Paracetamol|3|250|13000
 Beograd-Nis|Pesak|4|250|13000
 Novi Sad-Zajecar|Jecam|3|250|13000
+Skoplje-Novi Sad|Cigla|3|300|20400
+Kragujevac-Moskva|Sljunak|3|1000|40120

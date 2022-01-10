@@ -46,7 +46,7 @@ class Vozac:
         rute   .............. Pregled svih svojih ruta
         zavrsi .............. Zavrsite svoju aktivnu rutu
 
-        99     .............. Zavrsite sesiju i izadjite\033[0;37;40m
+        izadji .............. Zavrsite sesiju i izadjite\033[0;37;40m
         '''
 
         print(pomoc_vozac)
@@ -108,7 +108,7 @@ class Vozac:
                                 grad['posecenost'] += 1
                                 _grad1 = True
                             elif grad2['ime'] == grad['ime']:
-                                grad['posvecenost'] += 1
+                                grad['posecenost'] += 1
                                 _grad2 = True
 
                         if _grad1 == False:
@@ -127,15 +127,58 @@ class Vozac:
         if odgovor == 'da':
             self.prikaziGraf(gradovi)
 
+    def zavrsi(self, aRute):
+        print('        Vase aktivne rute:')
+        br = 1
+        for ruta in aRute:
+            print('''           \033[0;36;40m{})\033[0;37;40m {} \033[0;36;40m|\033[0;37;40m {}'''.format(br, ruta['ruta'], ruta['tovar']))
+            br += 1
+        
+        ruta = input('         Koju rutu zelite zavrsiti (id rute): ')
+        if ruta.isdigit():
+            ruta = int(ruta) - 1
+        else:
+            print("         \n\033[1;31;40mID rute mora biti broj!\033[0;37;40m")
+            return
+
+        kilometraza = input('         Koliko ste kilometara presli: ')
+        troskovi = input('         Koliko su izasli putni troskovi (gorivo, putarina...): ')
+
+        print('''
+        \033[0;36;40mRuta:\033[0;37;40m {}
+        \033[0;36;40mTovar:\033[0;37;40m {}
+        \033[0;36;40mVozac:\033[0;37;40m {}
+        \033[0;36;40mKilometraza:\033[0;37;40m {} km
+        \033[0;36;40mPutni troskovi:\033[0;37;40m {} rsd
+
+        '''.format(aRute[ruta]['ruta'], aRute[ruta]['tovar'], self.ime + ' ' + self.prezime, kilometraza, troskovi))
+        potvrda = input('Da li su podaci ispravni? (da/ne): ')
+
+        if potvrda == 'da':
+            with open('Data/Rute.txt', 'a') as file:
+                line = aRute[ruta]['ruta'] + '|' + aRute[ruta]['tovar'] + '|' + self.id  + '|' + kilometraza + '|' + troskovi
+                file.write('\n'+line)
+
+            with open('Data/AktivneRute.txt', 'r+') as file:
+                lineToDelete = aRute[ruta]['ruta'] + '|' + aRute[ruta]['tovar'] + '|' + self.id
+                new_file = file.readlines()
+                file.seek(0)
+                for line in new_file:
+                    if lineToDelete not in line:
+                        file.write(line)
+                file.truncate()
+
     def start(self):
         komanda = input('> ')
-        while komanda != '99':
+        while komanda != 'izadji':
             if komanda == 'pomoc':
                 self.pomoc()
             elif komanda == 'arute':
                 self.aRute(self.nadjiAktivneRute(self.id))
             elif komanda == 'rute':
                 self.sveRute(self.id)
+            elif komanda == 'zavrsi':
+                self.zavrsi(self.nadjiAktivneRute(self.id))
             elif komanda == '':
                 pass
             else:

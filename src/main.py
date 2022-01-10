@@ -23,13 +23,13 @@ def main():
     id = None
 
     while id == None:
-        username = input('Korisnicko ime:')
-        password = input('Unesite lozinku:')
+        username = input('\033[0;36;40m        Korisnicko ime: \033[0;37;40m')
+        password = input('\033[0;36;40m        Unesite lozinku: \033[0;37;40m')
         
         id, rank = login(username, password)
 
         if id == None:
-            print("\033[0;31;40m   Korisnicko ime ili lozinka nisu ispravni. Pokusajte ponovo.\033[0;37;40m ")
+            print("\033[0;31;40m        Korisnicko ime ili lozinka nisu ispravni. Pokusajte ponovo.\033[0;37;40m ")
 
 
     os.system('clear')
@@ -45,9 +45,9 @@ def main():
 
     stop_time = timeit.default_timer()
     print(f'''\033[0;36;40m
-    Sesija gotova!
-    Vreme koriscenja: \033[0;35;40m{(stop_time-start_time):.2f}\033[0;36;40m s
-    Dovidjenja!\033[0;37;40m
+        Sesija gotova!
+        Vreme koriscenja: \033[0;35;40m{(stop_time-start_time):.2f}\033[0;36;40m s
+        Dovidjenja!\033[0;37;40m
     ''')
 
 if __name__ == '__main__':
