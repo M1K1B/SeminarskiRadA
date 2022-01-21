@@ -1,0 +1,10 @@
+Subotica|131|40
+Beograd|234|273
+Novi Sad|152|196
+Nis|416|537
+Zrenjanin|224|170
+Sabac|136|283
+Cacak|220|437
+Krusevac|345|492
+Leskovac|422|594
+Podgorica|81|692

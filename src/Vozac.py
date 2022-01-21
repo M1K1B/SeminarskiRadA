@@ -158,15 +158,22 @@ class Vozac:
             with open('Data/Rute.txt', 'a') as file:
                 line = aRute[ruta]['ruta'] + '|' + aRute[ruta]['tovar'] + '|' + self.id  + '|' + kilometraza + '|' + troskovi
                 file.write('\n'+line)
+            
+            a_file = open("Data/AktivneRute.txt", "r")
+            lines = a_file.readlines()
+            a_file.close()
+            lineToDelete = aRute[ruta]['ruta'] + '|' + aRute[ruta]['tovar'] + '|' + self.id + '|_|_'
+            newFile = ''
 
-            with open('Data/AktivneRute.txt', 'r+') as file:
-                lineToDelete = aRute[ruta]['ruta'] + '|' + aRute[ruta]['tovar'] + '|' + self.id
-                new_file = file.readlines()
-                file.seek(0)
-                for line in new_file:
-                    if lineToDelete not in line:
-                        file.write(line)
-                file.truncate()
+            for line in lines:
+                if line.strip("\n") != lineToDelete and line.strip("\n") != "":
+                    newFile += line
+
+            if(newFile[-1:] == '\n'):
+                newFile = newFile[:-1]
+
+            with open('Data/AktivneRute.txt', 'w') as file:
+                file.write(newFile)
 
     def start(self):
         komanda = input('> ')

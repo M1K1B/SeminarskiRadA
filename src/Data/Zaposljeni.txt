@@ -1,3 +1,4 @@
-3|0|Mirko Mirkovic|0312993723153|0631526724|mmirkovic1|sifra123
-3|1|Mirko Mirkovic|0312993723153|0631526724|mmirkovic2|sifra12
-3|1|Mirko Mirkovic|0312993723153|0631526724|mmirkovic3|sifra1
+1|0|Mateja Djenic|1234567890123|0637847930|mdjenic|mircesekirce1
+2|1|Mirko Mirkovic|0312993723153|0631526724|test|sifra
+3|0|Nemanja Nemanjic|0312013723153|0641282781|nnemanjic|sifra123
+4|0|Mateja Djenic|1234567890123|0637847930|mdjenic|mircesekirce

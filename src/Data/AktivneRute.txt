@@ -1,3 +1,4 @@
-Beograd-Nis|Pesak|3|_|_
-Beograd-Nis|Pesak|4|_|_
-Beograd-Nis|Pesak|1|_|_
+Subotica-Sabac|Pesal|3|_|_
+Beograd-Nis|Pesal|2|_|_
+Subotica-Zrenjanin|Test|3|_|_
+Novi Sad-Cacak|Sljunak|1|_|_

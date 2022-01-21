@@ -1,4 +1,5 @@
 from Vozac import Vozac
+from Menadzer import Menadzer
 import timeit
 import os
 
@@ -16,8 +17,8 @@ def login(username, passwd):
     for user in users:
         if username == user['k_ime'] and passwd == user['k_lozinka']:
             return user['id'], user['rank']
-        else:
-            return None, None
+    
+    return None, None
 
 def main():
     id = None
@@ -33,13 +34,22 @@ def main():
 
 
     os.system('clear')
+
+    print('''
+    \033[0;31;40m ____  ____  ____  ____   __  ____  ____   __   __ _  ____  ____   __  ____  ____ 
+    \033[0;31;40m/ ___)(  __)(  _ \(  _ \ /  \(_  _)(  _ \ / _\ (  ( \/ ___)(  _ \ /  \(  _ \(_  _)
+    \033[0;36;40m\___ \ ) _)  )   / ) _ ((  O ) )(   )   //    \/    /\___ \ ) __/(  O ))   /  )(  
+    \033[0;37;40m(____/(____)(__\_)(____/ \__/ (__) (__\_)\_/\_/\_)__)(____/(__)   \__/(__\_) (__)
+
+    Dobrodosli u SerboTransport menadzment program. Za listu komanda napisite `\033[0;36;40mpomoc\033[0;37;40m`
+    ''')
+
     start_time = timeit.default_timer()
     
     if rank == '0':
         Vozac(id).start()
     elif rank == '1':
-        # Menadzer.start()
-        pass
+        Menadzer(id).start()
     else:
         print('Nepoznat rank!')
 

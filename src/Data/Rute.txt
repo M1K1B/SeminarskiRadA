@@ -1,8 +1,14 @@
 Beograd-Nis|Pesak|3|250|13000
-Skoplje-Jagodina|Sljunak|2|250|13000
-Zagreb-Beograd|Pesak|1|250|13000
-Beograd-Atina|Paracetamol|3|250|13000
+Beograd-Leskovac|Sljunak|2|250|13000
+Novi Sad-Beograd|Pesak|1|250|13000
+Beograd-Sabac|Paracetamol|3|250|13000
 Beograd-Nis|Pesak|4|250|13000
-Novi Sad-Zajecar|Jecam|3|250|13000
-Skoplje-Novi Sad|Cigla|3|300|20400
-Kragujevac-Moskva|Sljunak|3|1000|40120
+Novi Sad-Podgorica|Jecam|3|250|13000
+Subotica-Novi Sad|Cigla|3|300|20400
+Cacak-Nis|Sljunak|3|1000|40120
+Zrenjanin-Krusevac|Pesak|3|230|12000
+Nis-Zrenjanin|Pesak|3|200|4000
+Subotica-Sabac|Pesal|3|200|4900
+Novi Sad-Zrenjanin|Pesak|3|200|4999
+Podgorica-Leskovac|Djule|3|1|1
+Beograd-Podgorica|Bromazepan|4|1000|24000
